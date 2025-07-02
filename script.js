@@ -17,3 +17,10 @@ document.querySelectorAll('.stack-container img').forEach(icon => {
     alert(`Você clicou em ${icon.alt}!`);
   });
 });
+const typed = new Typed("#typed-text", {
+  strings: ["I’m a Developer"],
+  typeSpeed: 80,
+  backSpeed: 100,
+  startDelay: 300,
+  loop: true
+});

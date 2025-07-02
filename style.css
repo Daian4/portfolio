@@ -93,7 +93,8 @@ section{
    flex-wrap:wrap;
    align-items:center;
    min-height:100vh;
-   padding-top:10rem
+   padding-top:10rem;
+   gap: 4rem;
 }
 
 .hero-content{
@@ -105,7 +106,13 @@ section{
    line-height:1.2
 }
 
+.hero-name {
+   color: var(--main-color);
+   font-weight: 700;           
+ }
+
 .hero-content h1 span{
+   font-size:3rem;
    color:var(--main-color)
 }
 
