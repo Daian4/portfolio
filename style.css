@@ -132,6 +132,7 @@ section{
    align-items:center;
    justify-content:center;
    background:var(--bg-color);
+   transition:.3s;
 }
 
 .profile-pic img{
@@ -139,6 +140,11 @@ section{
    height:200%;
    object-fit:cover;
    border-radius:100%;
+}
+
+.profile-pic:hover{
+   transform:translateY(-30px);
+   box-shadow:0 0 70px var(--main-color)
 }
 
 
@@ -165,7 +171,7 @@ section{
 .education .edu-container{
    display:grid;
    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-   gap:2.5rem
+   gap:2.5rem;
 }
 
 .edu-card{
@@ -173,7 +179,7 @@ section{
    padding:2.5rem;
    border-radius:1.2rem;
    text-align:center;
-   transition:.3s
+   transition:.3s;
 }
 
 .edu-card i{
@@ -211,32 +217,25 @@ section{
    justify-content:center
 }
 
-.stacks img{
-   height:80px;
-   filter:grayscale(1);
-   transition:.3s
-}
-
 .stacks img:hover{
    filter:grayscale(0);
    transform:scale(1.1)
 }
 
-/* ---------- SECTION STACKS ---------- */
 .stacks {
    padding: 4rem 2rem;
-   background:rgba(0, 0, 0, 0.08); /* usa var global se existir */
+   background:rgba(0, 0, 0, 0.08);
    text-align: center;
  }
  
- .heading {
+.heading {
    font-size: 2.4rem;
    font-weight: 700;
    color: var(--main-color);
  }
  
  /* ---------- GRID DE ÍCONES ---------- */
- .stack-container {
+.stack-container {
    display: grid;
    gap: 1.5rem;
    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -245,7 +244,7 @@ section{
    align-items: center;
  }
  
- .stack-container img {
+.stack-container img {
    width: 115px;
    height: 90px;
    padding: 1.2rem;
@@ -256,10 +255,9 @@ section{
    user-select: none;
  }
  
- .stack-container img:hover {
+.stack-container img:hover {
    transform: translateY(-6px) scale(1.08);
-   box-shadow: 0 12px 24px rgba(9, 9, 9, 0.919);
-   cursor: pointer;
+   box-shadow:0 0 25px var(--main-color);
  } 
 
 .projects{
@@ -273,15 +271,20 @@ section{
 }
 
 .project-card{
+   width: 700px;   /* largura idêntica */
+   height: 350px;
    position:relative;
    overflow:hidden;
+   background:#fff;
    border-radius:1.5rem
 }
 
 .project-card img{
-   width:100%;
-   display:block;
-   transition:.5s
+   width:100%;              /**/
+   height:100%;             
+   object-fit:contain;
+   display: block;
+   transition: .5s;
 }
 
 .project-info{
