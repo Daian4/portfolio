@@ -8,7 +8,7 @@
 
 :root{
    --bg-color:#080808;
-   --second-bg-color:#001005;
+   --second-bg-color:rgba(255, 255, 255, 0.12);
    --text-color:#fff;
    --main-color:#02feec;
 }
@@ -228,7 +228,7 @@ section{
 }
 
 .edu-card{
-   background:var(--second-bg-color);
+   background:rgba(255, 255, 255, 0.12);
    padding:2.5rem;
    border-radius:1.2rem;
    text-align:center;
@@ -528,9 +528,12 @@ section{
    background: var(--main-color);
 }
  /* ---------- Responsivo ---------- */
-@media (max-width: 480px) {
+@media (max-width: 980px) {
    .lab-card {
      flex: 0 0 240px;
+   }
+   .lab-container {
+      justify-content:start;
    }
 } 
 
