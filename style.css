@@ -16,13 +16,18 @@
 html{
    font-size:60%;
    scroll-behavior:smooth;
-   overflow-x:hidden
+   overflow-x:hidden;
+   -webkit-text-size-adjust: 100%;
+   -ms-text-size-adjust: 100%;
 }
 
 body{
    background:var(--bg-color);
    color:var(--text-color);
-   font-family:'Poppins',sans-serif
+   font-family:'Poppins',sans-serif;
+   line-height: 1.6;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
 }
 
 section{
@@ -117,7 +122,7 @@ section{
 }
 
 .hero-content p{
-   font-size:1.6rem;
+   font-size:1.8rem;
    margin:2rem 0 3rem
 }
 
@@ -174,10 +179,9 @@ section{
    box-shadow:0 0 60px var(--main-color)
 }
 
-
 .heading{
    text-align:center;
-   font-size:4rem;
+   font-size:4.5rem;
    margin-bottom:4rem
 }
 
@@ -254,7 +258,7 @@ section{
 
 .stacks {
    padding: 4rem 2rem;
-   background:rgba(0, 0, 0, 0.08); /*Fundo da stack*/
+   background:rgba(0, 0, 0, 0.08);
    text-align: center;
  }
  
@@ -296,16 +300,19 @@ section{
 .projects-container{
    display:grid;
    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-   gap:2.5rem
+   gap:2.5rem;
+   justify-items: center;
 }
 
 .project-card{
-   width: 700px;
+   width: 100%;
+   max-width: 700px;
    height: 350px;
    position:relative;
    overflow:hidden;
    background:#fff;
-   border-radius:1.5rem
+   border-radius:1.5rem;
+   margin: 0 auto;
 }
 
 .project-card img{
@@ -364,7 +371,7 @@ section{
 
 .contact {
    padding: 4rem 2rem;
-   background:rgba(0, 0, 0, 0.08); /*Fundo da stack*/
+   background:rgba(0, 0, 0, 0.08);
    text-align: center;
  }
  
@@ -406,4 +413,453 @@ section{
 .footer-iconTop a{
    font-size:2.4rem;
    color:var(--text-color);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+   html {
+      font-size: 55%;
+   }
+   
+   .project-card {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+   }
+   
+   .profile-pic {
+      width: 400px;
+      height: 400px;
+   }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+   html {
+      font-size: 50%;
+   }
+   
+   section {
+      padding: 7rem 2%;
+   }
+   
+   .hero {
+      padding-top: 8rem;
+      gap: 3rem;
+   }
+   
+   .hero-content h1 {
+      font-size: 4rem;
+   }
+   
+   .hero-content h1 span {
+      font-size: 2.5rem;
+   }
+   
+   .hero-content p {
+      font-size: 1.6rem;
+   }
+   
+   .profile-pic {
+      width: 350px;
+      height: 350px;
+   }
+   
+   .heading {
+      font-size: 4rem;
+   }
+   
+   .about p {
+      font-size: 1.8rem;
+      max-width: 600px;
+   }
+   
+   .edu-container {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+   }
+   
+   .stack-container {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1.2rem;
+   }
+   
+   .stack-container img {
+      width: 100px;
+      height: 80px;
+      padding: 1rem;
+   }
+   
+   .projects-container {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+   }
+   
+   .project-card {
+      height: 280px;
+   }
+   
+   .project-info h3 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+   }
+   
+   .project-info p {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+   }
+   
+   .project-info ul {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+   }
+   
+   .icon-container {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1.2rem;
+   }
+   
+   .icon-container img {
+      width: 80px;
+      height: 70px;
+      padding: 1rem;
+   }
+   
+   .hero-content .btn {
+      margin-bottom: 2rem;
+   }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+   html {
+      font-size: 45%;
+   }
+   
+   #menu-icon {
+      display: block;
+   }
+   
+   .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1rem 3%;
+      background: rgba(8, 8, 8, 0.95);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: 0.3s ease;
+   }
+   
+   .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+   
+   .navbar a {
+      display: block;
+      font-size: 1.8rem;
+      margin: 2rem 0;
+      text-align: center;
+   }
+   
+   .hero {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 10rem;
+      gap: 0.5rem;
+   }
+   
+   .hero-content {
+      order: 2;
+   }
+   
+   .hero-img {
+      order: 1;
+   }
+   
+   .hero-content h1 {
+      font-size: 3.5rem;
+   }
+   
+   .hero-content h1 span {
+      font-size: 2.2rem;
+   }
+   
+   .hero-content p {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 2rem;
+   }
+   
+   .profile-pic {
+      width: 280px;
+      height: 280px;
+   }
+   
+   .heading {
+      font-size: 3.5rem;
+      margin-bottom: 3rem;
+   }
+   
+   .about p {
+      font-size: 1.6rem;
+      padding: 0 0.5rem;
+   }
+   
+   .edu-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+   }
+   
+   .edu-card {
+      padding: 2rem;
+   }
+   
+   .edu-card h3 {
+      font-size: 1.6rem;
+   }
+   
+   .edu-card p {
+      font-size: 1.3rem;
+   }
+   
+   .stack-container {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+   }
+   
+   .stack-container img {
+      width: 80px;
+      height: 65px;
+      padding: 0.8rem;
+   }
+   
+   .projects-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+   }
+   
+   .project-card {
+      height: 250px;
+   }
+   
+   .project-info h3 {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+   }
+   
+   .project-info p {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+   }
+   
+   .project-info ul {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+   }
+   
+   .icon-container {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+   }
+   
+   .icon-container img {
+      width: 70px;
+      height: 60px;
+      padding: 0.8rem;
+   }
+   
+   .footer {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+   }
+   
+   .hero-content .btn {
+      margin-bottom: 2rem;
+   }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+   html {
+      font-size: 40%;
+   }
+   
+   section {
+      padding: 5rem 1%;
+   }
+   
+   .header {
+      padding: 1.5rem 2%;
+   }
+   
+   .logo {
+      font-size: 2.2rem;
+   }
+   
+   .hero {
+      padding-top: 5rem;
+      gap: 1.5rem;
+   }
+   
+   .hero-content h1 {
+      font-size: 3rem;
+   }
+   
+   .hero-content h1 span {
+      font-size: 2rem;
+   }
+   
+   .hero-content p {
+      font-size: 1.4rem;
+      margin: 1rem 0 1.5rem;
+   }
+   
+   .profile-pic {
+      width: 240px;
+      height: 240px;
+   }
+   
+   .heading {
+      font-size: 3rem;
+      margin-bottom: 2.5rem;
+   }
+   
+   .about p {
+      font-size: 1.5rem;
+      padding: 0;
+   }
+   
+   .edu-card {
+      padding: 1.5rem;
+   }
+   
+   .edu-card i {
+      font-size: 3.5rem;
+   }
+   
+   .edu-card h3 {
+      font-size: 1.5rem;
+   }
+   
+   .edu-card p {
+      font-size: 1.2rem;
+   }
+   
+   .stack-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+   }
+   
+   .stack-container img {
+      width: 70px;
+      height: 55px;
+      padding: 0.6rem;
+   }
+   
+   .project-card {
+      height: 220px;
+   }
+   
+   .project-info h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+   }
+   
+   .project-info p {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+   }
+   
+   .project-info ul {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+   }
+   
+   .project-info .btn {
+      padding: 0.8rem 2rem;
+      font-size: 1.4rem;
+   }
+   
+   .icon-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+   }
+   
+   .icon-container img {
+      width: 60px;
+      height: 50px;
+      padding: 0.6rem;
+   }
+   
+   .footer {
+      padding: 1.5rem 2%;
+   }
+   
+   .footer-text p {
+      font-size: 1.2rem;
+   }
+   
+   .footer-iconTop a {
+      font-size: 2rem;
+   }
+   
+   .hero-content .btn {
+      margin-bottom: 2rem;
+   }
+}
+
+/* Very small devices (less than 400px) */
+@media (max-width: 399.98px) {
+   html {
+      font-size: 35%;
+   }
+   
+   .hero-content h1 {
+      font-size: 2.5rem;
+   }
+   
+   .hero-content h1 span {
+      font-size: 1.8rem;
+   }
+   
+   .hero-content p {
+      font-size: 1.3rem;
+   }
+   
+   .profile-pic {
+      width: 200px;
+      height: 200px;
+   }
+   
+   .heading {
+      font-size: 2.5rem;
+   }
+   
+   .about p {
+      font-size: 1.4rem;
+   }
+   
+   .stack-container {
+      grid-template-columns: 1fr;
+   }
+   
+   .stack-container img {
+      width: 70px;
+      height: 60px;
+   }
+   
+   .icon-container {
+      grid-template-columns: 1fr;
+   }
+   
+   .icon-container img {
+      width: 40px;
+      height: 30px;
+   }
 }
