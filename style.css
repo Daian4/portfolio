@@ -203,8 +203,13 @@ section{
    line-height:1.6;
 }
 
+.education{
+   background: black;
+}
+
 .education .edu-container{
    display:grid;
+   background: black;
    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
    gap:2.5rem;
 }
@@ -245,6 +250,121 @@ section{
    box-shadow:0 0 20px var(--main-color)
 }
 
+.experience .heading {
+   font-size: 2.4rem;
+   font-weight: 700;
+   color: var(--main-color)
+}
+
+.experience {
+   padding: 100px 15px;
+   background: black;
+}
+
+.experience h2 {
+   margin-bottom: 5rem;
+}
+
+.experience .timeline-items {
+   max-width: 1200px;
+   margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   position: relative;
+}
+
+.experience .timeline-items:before {
+   content: "";
+   position: absolute;
+   width: 5px;
+   height: 100%;
+   background-color: var(--main-color);
+   left: calc(50% - 1px);
+}
+
+.experience .timeline-item {
+   margin-bottom: 40px;
+   width: 100%;
+   position: relative;
+}
+
+.experience .timeline-item:last-child {
+   margin-bottom: 0;
+}
+
+.experience .timeline-item:nth-child(odd) {
+   padding-right: calc(50% + 30px);
+   text-align: right;
+}
+
+.experience .timeline-item:nth-child(even) {
+   padding-left: calc(50% + 30px);
+}
+
+.experience .timeline-dot {
+   height: 21px;
+   width: 21px;
+   background-color: var(--main-color);
+   box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+   position: absolute;
+   left: calc(50% - 8px);
+   border-radius: 50%;
+   top: 10px;
+}
+
+.experience .timeline-date {
+   font-size: 16px;
+   font-weight: 800;
+   color: white;
+   margin: 6px 0 15px;
+   padding-left: 0;
+   text-align: left;
+}
+
+.experience .timeline-content {
+   background-color: var(--bg-color);
+   border: 3px solid var(--main-color);
+   padding: 16px 12px;
+   border-radius: 1.2rem;
+   box-shadow: 0 0 10px var(--main-color);
+   cursor: pointer;
+   transition: 0.3s ease-in-out;
+   max-width: 95%;
+   margin: 0 auto 20px auto;
+}
+
+.experience .timeline-content:hover {
+   transform: scale(1.05);
+   box-shadow: 0 0 25px var(--main-color);
+}
+
+.experience .timeline-content h3 {
+   font-size: 18px;
+   color: white;
+   margin: 0 0 8px;
+   font-weight: 500;
+}
+
+.experience .timeline-content p {
+   color: white;
+   font-size: 14px;
+   font-weight: 300;
+   line-height: 20px;
+}
+
+::-webkit-scrollbar {
+   width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+   background-color: var(--bg-color);
+   width: 50px;
+}
+
 .stacks .stack-container{
    display:flex;
    flex-wrap:wrap;
@@ -258,7 +378,7 @@ section{
 
 .stacks {
    padding: 4rem 2rem;
-   background:rgba(0, 0, 0, 0.08);
+   background:black;
    text-align: center;
  }
  
@@ -294,7 +414,7 @@ section{
  } 
 
 .projects{
-   background:rgba(9, 9, 9, 0.919);
+   background:black;
 }
 
 .projects-container{
@@ -371,7 +491,7 @@ section{
 
 .contact {
    padding: 4rem 2rem;
-   background:rgba(0, 0, 0, 0.08);
+   background:black;
    text-align: center;
  }
  
@@ -403,7 +523,7 @@ section{
    justify-content:space-between;
    align-items:center;
    padding:2rem 3%;
-   background:var(--second-bg-color)
+   background: rgba(67, 120, 130, 0.012)
 }
 
 .footer-text p{
@@ -412,7 +532,7 @@ section{
 
 .footer-iconTop a{
    font-size:2.4rem;
-   color:var(--text-color);
+   color:var(--main-color);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -529,6 +649,28 @@ section{
    
    .hero-content .btn {
       margin-bottom: 2rem;
+   }
+   
+   .experience .timeline-items {
+      flex-direction: column;
+      max-width: 100%;
+      padding: 0 1rem;
+   }
+   .experience .timeline-item,
+   .experience .timeline-item:nth-child(odd),
+   .experience .timeline-item:nth-child(even) {
+      padding: 0;
+      text-align: left;
+   }
+   .experience .timeline-items:before {
+      left: calc(50% - 1px);
+   }
+   .experience .timeline-dot {
+      left: calc(50% - 8px);
+   }
+   .experience .timeline-date {
+      padding-left: 0;
+      text-align: left;
    }
 }
 
@@ -811,6 +953,25 @@ section{
    
    .hero-content .btn {
       margin-bottom: 2rem;
+   }
+   
+   .experience .timeline-content {
+      padding: 10px 6px;
+      border-radius: 1rem;
+      max-width: 95%;
+      margin: 0 auto;
+   }
+   .experience .timeline-date {
+      font-size: 16px;
+      padding-left: 0;
+      text-align: left;
+   }
+   .experience .timeline-content h3 {
+      font-size: 16px;
+   }
+   .experience .timeline-content p {
+      font-size: 13px;
+      line-height: 18px;
    }
 }
 
