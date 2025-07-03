@@ -181,7 +181,6 @@ section{
 
 .heading{
    text-align:center;
-   font-size:4.5rem;
    margin-bottom:4rem
 }
 
@@ -194,6 +193,10 @@ section{
    align-items:center;
    min-height:100vh;
    padding-top: 10rem;
+}
+
+.about h2{
+   font-size:4.5rem;
 }
 
 .about p{
@@ -211,6 +214,10 @@ section{
    align-items:center;
    min-height:100vh;
    padding-top: 10rem;
+}
+
+.education h2{
+   font-size:4.5rem;
 }
 
 .education .edu-container{
@@ -257,7 +264,7 @@ section{
 }
 
 .experience .heading {
-   font-size: 2.4rem;
+   font-size: 4.5rem;
    font-weight: 700;
    color: var(--main-color)
 }
@@ -268,7 +275,7 @@ section{
 }
 
 .experience h2 {
-   margin-bottom: 5rem;
+   margin-bottom: 1rem;
 }
 
 .experience .timeline-items {
@@ -392,7 +399,7 @@ section{
  }
  
 .heading {
-   font-size: 2.4rem;
+   font-size: 4.5rem;
    font-weight: 700;
    color: var(--main-color);
  }
