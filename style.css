@@ -189,7 +189,7 @@ section{
 }
 
 .about{
-   background:rgba(0, 0, 0, 0.08); 
+   background: radial-gradient(circle at 20% 0%, #1f2937 0%, #0d1117 60%, #050b12 100%); 
    align-items:center;
    min-height:100vh;
    padding-top: 10rem;
@@ -271,7 +271,7 @@ section{
 
 .experience {
    padding: 100px 15px;
-   background: black;
+   background: radial-gradient(circle at 20% 0%, #1f2937 0%, #0d1117 60%, #050b12 100%);
 }
 
 .experience h2 {
@@ -335,7 +335,8 @@ section{
 }
 
 .experience .timeline-content {
-   background-color: var(--bg-color);
+   background: rgba(255, 255, 255, 0.12);
+   backdrop-filter: blur(10px);
    border: 3px solid var(--main-color);
    padding: 16px 12px;
    border-radius: 1.2rem;
@@ -427,7 +428,111 @@ section{
 .stack-container img:hover {
    transform: translateY(-6px) scale(1.08);
    box-shadow:0 0 25px var(--main-color);
- } 
+}
+
+.devops-lab {
+   min-height:100vh;
+   padding-top:10rem;
+   padding: 4rem 1rem;
+   background: radial-gradient(circle at 20% 0%, #1f2937 0%, #0d1117 60%, #050b12 100%);
+}
+ 
+.devops-lab .heading {
+   text-align: center;
+   font-size: 4.5rem;
+   color: #fafafa;
+}
+ 
+.devops-lab .heading span {
+   color: var(--main-color);
+}
+
+.lab-container {
+   display: flex;
+   justify-content: center;
+   gap: 2rem;
+   overflow-x: auto;
+   padding-top: 3rem;
+   padding-bottom: 5rem;
+   scroll-snap-type: x mandatory;
+   scroll-padding: 1rem;
+}
+ 
+.lab-container::-webkit-scrollbar {
+   height: 8px;
+}
+.lab-container::-webkit-scrollbar-thumb {
+   background: var(--main-color);
+   border-radius: 4px;
+}
+
+.lab-card {
+   flex: 0 0 280px;
+   scroll-snap-align: start;
+   background: rgba(255, 255, 255, 0.12);
+   border-radius: 20px;
+   backdrop-filter: blur(10px);
+   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 2em;
+   transition: transform 0.35s ease, box-shadow 0.35s ease;
+   position: relative;
+}
+
+.lab-card:hover {
+   transform: scale(1.12);
+   z-index: 10;
+   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.lab-card .card-img {
+   width: 100%;
+   height: 160px;
+   overflow: hidden;
+   border-radius: 12px;
+   margin-bottom: 0.9rem;
+}
+.lab-card .card-img img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+ 
+.lab-card h3 {
+   font-size: 2.5rem;
+   margin: 0.4rem 0;
+   text-align: center;
+   color: #fafafa;
+}
+.lab-card p {
+   font-size: 1.5rem;
+   text-align: center;
+   margin-bottom: 1rem;
+   line-height: 1.35;
+   color: #d1d5db;
+}
+ 
+.btn-view {
+   font-size: 1.3rem;
+   padding: 1rem 1.2rem;
+   border-radius: 9999px;
+   background: #02feec;
+   color: #000;
+   text-decoration: none;
+   font-weight: 600;
+   transition: background 0.2s;
+}
+.btn-view:hover {
+   background: var(--main-color);
+}
+ /* ---------- Responsivo ---------- */
+@media (max-width: 480px) {
+   .lab-card {
+     flex: 0 0 240px;
+   }
+} 
 
 .projects{
    background:black;
